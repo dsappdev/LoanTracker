@@ -1,0 +1,39 @@
+Loan Number: 1
+Original Principal: 1000.00
+Principal Balance: 700.00
+Interest Rate: 0.04
+Monthly Payment: 15.00
+Last Payment Date: 2019-04-01
+Last Payment Amount: 15.00
+Interest Paid: 2.30
+Principal Paid: 12.70
+
+Loan Number: 2
+Original Principal: 2000.00
+Principal Balance: 1400.00
+Interest Rate: 0.035
+Monthly Payment: 22.00
+Last Payment Date: 2019-04-01
+Last Payment Amount: 26.03
+Interest Paid: 4.03
+Principal Paid: 22.00
+
+Loan Number: 3
+Original Principal: 1500.00
+Principal Balance: 1250.00
+Interest Rate: 0.035
+Monthly Payment: 18.00
+Last Payment Date: 2019-04-01
+Last Payment Amount: 21.60
+Interest Paid: 3.60
+Principal Paid: 18.00
+
+Loan Number: 4
+Original Principal: 900.00
+Principal Balance: 600.00
+Interest Rate: 0.0375
+Monthly Payment: 12.50
+Last Payment Date: 2019-04-01
+Last Payment Amount: 14.35
+Interest Paid: 1.85
+Principal Paid: 12.50
