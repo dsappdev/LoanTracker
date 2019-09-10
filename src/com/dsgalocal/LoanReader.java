@@ -44,7 +44,9 @@ public class LoanReader {
             double lastPymt = 0.0d;
             double intPaid = 0.0d;
             double prinPaid = 0.0d;
+            double paymentAmount = 0.0d;
             LocalDate lastPymtDate = null;
+            LocalDate paymentDate = null;
             
             while (content != null) {                
                 if (!content.equals("")) {                    
@@ -77,13 +79,19 @@ public class LoanReader {
                             break;
                         case "Principal Paid":
                             prinPaid = Double.parseDouble(split[1].trim());
-                            break;                            
+                            break;
+                        case "Payment Date":
+                            paymentDate = LocalDate.parse(split[1].trim());
+                            break;
+                        case "Payment Amount":
+                            paymentAmount = Double.parseDouble(split[1].trim());
                     }
                 }
                 content = inputStream.readLine();
                 if(content != null && !content.isEmpty()) {
                     loan = new Loan(number, startPrin, balance, rate, 
-                            mnthPymt, lastPymtDate, lastPymt, intPaid, prinPaid);
+                            mnthPymt, lastPymtDate, paymentDate, lastPymt, 
+                            paymentAmount, intPaid, prinPaid);
                     loans.put(number, loan);
                 }
             }            
