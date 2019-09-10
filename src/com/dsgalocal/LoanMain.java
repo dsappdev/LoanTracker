@@ -24,5 +24,7 @@ public class LoanMain {
         System.out.println(myLoans.get(3).toString());
         System.out.println(myLoans.get(4).toString());
         
+        
+        
     }
 }

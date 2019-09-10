@@ -16,9 +16,11 @@ public class Loan {
     double interestRate = 0.0d;
     double monthlyPayment = 0.0d;
     LocalDate lastPaymentDate = null;
+    LocalDate paymentDate = null;
+    double paymentAmount = 0.0d;
     double lastPaymentAmount = 0.0d;
     double interestPaid = 0.0d;
-    double principalPaid = 0.0d;
+    double principalPaid = 0.0d;    
     
     
     public Loan() {}
@@ -58,7 +60,8 @@ public class Loan {
      */
     public Loan(int loanNumber, double originalPrincipal, 
             double principalBalance, double interestRate, double monthlyPayment,
-            LocalDate lastPaymentDate, double lastPaymentAmount, double interestPaid,
+            LocalDate lastPaymentDate, LocalDate paymentDate,
+            double lastPaymentAmount, double paymentAmount, double interestPaid, 
             double principalPaid) {
         this.loanNumber = loanNumber;
         this.originalPrincipal = originalPrincipal;
@@ -66,9 +69,19 @@ public class Loan {
         this.interestRate = interestRate;
         this.monthlyPayment = monthlyPayment;
         this.lastPaymentDate = lastPaymentDate;
+        this.paymentDate = paymentDate;
         this.lastPaymentAmount = lastPaymentAmount;
         this.interestPaid = interestPaid;
-        this.principalPaid = principalPaid;    
+        this.principalPaid = principalPaid;
+        this.paymentAmount = paymentAmount;
+    }
+
+    public LocalDate getPaymentDate() {
+        return paymentDate;
+    }
+
+    public void setPaymentDate(LocalDate paymentDate) {
+        this.paymentDate = paymentDate;
     }
 
     public int getLoanNumber() {
@@ -150,6 +163,7 @@ public class Loan {
                 + "Principal Balance: " + principalBalance + "\n"
                 + "Interest Rate: " + interestRate + "\n"
                 + "Monthly Payment: " + monthlyPayment + "\n"
+                + "Payment Date: " + paymentDate + "\n"
                 + "Last Payment Date: " + lastPaymentDate + "\n"
                 + "Last Payment Amount: " + lastPaymentAmount + "\n"
                 + "Interest Paid: " + interestPaid + "\n"
